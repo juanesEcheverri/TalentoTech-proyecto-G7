@@ -5,7 +5,7 @@ export function SolarOverview() {
   return (
     <section className="py-16 bg-trasparent">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-gray-800 hover:text-purple-400 mb-8 text-center">
+        <h2 className="text-4xl font-bold text-yellow-400 hover:text-green-400 mb-8 text-center">
               Energía solar: impulsando un futuro sostenible
         </h2>
         
@@ -42,19 +42,19 @@ export function SolarOverview() {
           <h3 className="text-2xl font-bold mb-6 text-gray-800 hover:text-purple-400">Estadísticas clave</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white p-4 rounded-lg shadow">
-              <p className="text-3xl font-bold text-purple-500 hover:text-blue-300">1,000+ GW</p>
+              <p className="text-3xl font-bold text-green-500 hover:text-yellow-400">1,000+ GW</p>
               <p className="text-gray-600">Capacidad solar global</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
-              <p className="text-3xl font-bold text-purple-500 hover:text-blue-300">3%</p>
+              <p className="text-3xl font-bold text-green-500 hover:text-yellow-400">3%</p>
               <p className="text-gray-600">Participación global de la electricidad</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
-              <p className="text-3xl font-bold text-purple-500 hover:text-blue-300">70%</p>
+              <p className="text-3xl font-bold text-green-500 hover:text-yellow-400">70%</p>
               <p className="text-gray-600">Reducción de costos desde 2010</p>
             </div>
             <div className="bg-white p-4 rounded-lg shadow">
-              <p className="text-3xl font-bold text-purple-500 hover:text-blue-300">25+ Años</p>
+              <p className="text-3xl font-bold text-green-500 hover:text-yellow-400">25+ Años</p>
               <p className="text-gray-600">Vida útil promedio del panel</p>
             </div>
           </div>

@@ -8,6 +8,7 @@ export default {
     extend: {
       backgroundImage:{
         'main-bg':"url(public/background.png.jpg)"
+      
       }
     },
   },

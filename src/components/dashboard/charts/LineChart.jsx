@@ -1,39 +1,39 @@
-import React from 'react';
-import {
-  LineChart as RechartsLineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
-} from 'recharts';
+import React from "react";
+import { Line } from "react-chartjs-2";
 
-export default function CapacityLineChart({ data, series }) {
-  return (
-    <div className="bg-white p-6 rounded-xl shadow-lg">
-      <h3 className="text-xl font-semibold mb-4">Installed Capacity Trends</h3>
-      <div className="h-[400px]">
-        <ResponsiveContainer width="100%" height="100%">
-          <RechartsLineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="year" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            {series.map((s) => (
-              <Line
-                key={s.dataKey}
-                type="monotone"
-                dataKey={s.dataKey}
-                stroke={s.color}
-                name={s.name}
-              />
-            ))}
-          </RechartsLineChart>
-        </ResponsiveContainer>
-      </div>
-    </div>
-  );
-}
+const LineChart = () => {
+  const data = {
+    labels: ["2010", "2012", "2014", "2016", "2018", "2020"], // Años
+    datasets: [
+      {
+        label: "Capacidad Instalada de Energía Eólica (GW)",
+        data: [50, 75, 100, 125, 150, 200],
+        borderColor: "#4CAF50",
+        fill: false,
+      },
+      {
+        label: "Capacidad Instalada de Energía Solar (GW)",
+        data: [10, 25, 50, 75, 100, 150],
+        borderColor: "#2196F3",
+        fill: false,
+      },
+      {
+        label: "Capacidad Instalada de Energía Geotérmica (GW)",
+        data: [5, 10, 15, 20, 25, 30],
+        borderColor: "#FF5722",
+        fill: false,
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: { display: true, position: "top" },
+    },
+  };
+
+  return <Line data={data} options={options} />;
+};
+
+export default LineChart;
